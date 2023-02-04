@@ -11,13 +11,13 @@ function draw(){
     let canvas = document.getElementById('canvas'),
         ctx = canvas.getContext('2d');
         ctx.fillStyle = 'red';
-        ctx.fillRect(0,0,100,num[0]);
+        ctx.fillRect(0,0,200,num[0]);
         ctx.fillStyle = 'orange';
-        ctx.fillRect(0,num[0],100,num[1]);
+        ctx.fillRect(0,num[0],200,num[1]);
         ctx.fillStyle = 'yellow';
-        ctx.fillRect(0,num[1]+num[0],100,num[2]);
+        ctx.fillRect(0,num[1]+num[0],200,num[2]);
         ctx.fillStyle = 'green';
-        ctx.fillRect(0,num[2]+num[1]+num[0],100,num[3]);
+        ctx.fillRect(0,num[2]+num[1]+num[0],200,num[3]);
         ctx.fillStyle = 'blue';
-        ctx.fillRect(0,num[3]+num[2]+num[1]+num[0],100,num[4]);
+        ctx.fillRect(0,num[3]+num[2]+num[1]+num[0],200,num[4]);
 }draw();
