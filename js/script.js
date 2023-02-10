@@ -1,19 +1,20 @@
-function draw(canvas, ctx, num, color, offset, colors ) {
+function draw(ctx, num, color ) {
 
-        canvas = document.getElementById('canvas'); // поиск документа в html
-        ctx = canvas.getContext('2d');  // стиль рисовки
-
-        num = [10,10,10,10,10,10,10,10,10,10]; // Проценты котораый занимает один блок цвета
-        color = ['red', 'orange', 'yellow', 'green', 'blue','darkblue','purple']; //цвета которые в дальнейшем будут идти безперерывно подряд
-        offset = 0;
+    let offset = 0;
+    let canvas = document.getElementById('canvas');
 
     for (let i = 0; i < num.length; i++){
-    colors = color[i % color.length]; // переменная colors забирает остаток от деления color
+    colors = color[i % color.length];
 
         ctx.fillStyle = colors;
-        ctx.fillRect(0,offset,200,num[i]); // можно прописать один раз и код будет производить столько раз сколько понадобиться
-        offset += num[i];       // код принимает значения num и отсуп идет с 0
+        ctx.fillRect(0,offset,200,num[i]);
+        offset += num[i];
     }
-}draw();
+}
+draw(
+    canvas.getContext('2d'),
+    [10,10,10,10,10,10,10,10,10,10],
+    ['red', 'orange', 'yellow', 'green', 'blue','darkblue','purple']
+);
 
 
